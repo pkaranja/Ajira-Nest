@@ -57,7 +57,7 @@ public class CandidateDTO {
     private Boolean currentlyEmployed;
 
     @Size(max = 255)
-    private String linkedIn;
+    private String linkedInUrl;
 
     @Digits(integer = 10, fraction = 2)
     @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -77,6 +77,9 @@ public class CandidateDTO {
 
     @Size(max = 255)
     private String coverLetterText;
+
+    @Size(max = 255)
+    private String githubUrl;
 
     @NotNull
     private LocalDate dateOfBirth;

@@ -8,6 +8,6 @@ public interface CandidateRepository extends JpaRepository<Candidate, UUID> {
 
     boolean existsByMobileIgnoreCase(String mobile);
 
-    boolean existsByLinkedInIgnoreCase(String linkedIn);
+    boolean existsByLinkedInUrlIgnoreCase(String linkedInUrl);
 
 }

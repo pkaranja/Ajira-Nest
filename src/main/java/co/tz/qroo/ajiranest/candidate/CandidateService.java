@@ -70,13 +70,14 @@ public class CandidateService {
         candidateDTO.setCity(candidate.getCity());
         candidateDTO.setCountry(candidate.getCountry());
         candidateDTO.setCurrentlyEmployed(candidate.getCurrentlyEmployed());
-        candidateDTO.setLinkedIn(candidate.getLinkedIn());
+        candidateDTO.setLinkedInUrl(candidate.getLinkedInUrl());
         candidateDTO.setDesiredSalary(candidate.getDesiredSalary());
         candidateDTO.setCurrency(candidate.getCurrency());
         candidateDTO.setResumeFile(candidate.getResumeFile());
         candidateDTO.setResumeText(candidate.getResumeText());
         candidateDTO.setCoverLetterFile(candidate.getCoverLetterFile());
         candidateDTO.setCoverLetterText(candidate.getCoverLetterText());
+        candidateDTO.setGithubUrl(candidate.getGithubUrl());
         candidateDTO.setDateOfBirth(candidate.getDateOfBirth());
         candidateDTO.setActive(candidate.getActive());
         return candidateDTO;
@@ -94,13 +95,14 @@ public class CandidateService {
         candidate.setCity(candidateDTO.getCity());
         candidate.setCountry(candidateDTO.getCountry());
         candidate.setCurrentlyEmployed(candidateDTO.getCurrentlyEmployed());
-        candidate.setLinkedIn(candidateDTO.getLinkedIn());
+        candidate.setLinkedInUrl(candidateDTO.getLinkedInUrl());
         candidate.setDesiredSalary(candidateDTO.getDesiredSalary());
         candidate.setCurrency(candidateDTO.getCurrency());
         candidate.setResumeFile(candidateDTO.getResumeFile());
         candidate.setResumeText(candidateDTO.getResumeText());
         candidate.setCoverLetterFile(candidateDTO.getCoverLetterFile());
         candidate.setCoverLetterText(candidateDTO.getCoverLetterText());
+        candidate.setGithubUrl(candidateDTO.getGithubUrl());
         candidate.setDateOfBirth(candidateDTO.getDateOfBirth());
         candidate.setActive(candidateDTO.getActive());
         return candidate;
@@ -110,8 +112,8 @@ public class CandidateService {
         return candidateRepository.existsByMobileIgnoreCase(mobile);
     }
 
-    public boolean linkedInExists(final String linkedIn) {
-        return candidateRepository.existsByLinkedInIgnoreCase(linkedIn);
+    public boolean linkedInUrlExists(final String linkedInUrl) {
+        return candidateRepository.existsByLinkedInUrlIgnoreCase(linkedInUrl);
     }
 
 }

@@ -71,7 +71,7 @@ public class Candidate {
     private Boolean currentlyEmployed;
 
     @Column(unique = true)
-    private String linkedIn;
+    private String linkedInUrl;
 
     @Column(precision = 10, scale = 2)
     private BigDecimal desiredSalary;
@@ -90,6 +90,9 @@ public class Candidate {
 
     @Column
     private String coverLetterText;
+
+    @Column
+    private String githubUrl;
 
     @Column(nullable = false)
     private LocalDate dateOfBirth;
